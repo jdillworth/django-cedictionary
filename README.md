@@ -1,3 +1,6 @@
+Note: This modules is alpha and not yet fully functional. It has models
+and a management command to load data, but has no views, templates or admin.
+
 # django-cedictionary
 
 A Django app that provides a basic Chinese-English dictionary lookup. That is,

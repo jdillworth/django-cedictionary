@@ -1,4 +1,4 @@
-Note: This modules is alpha and not yet fully functional. It has models
+Note: This module is alpha and not yet fully functional. It has models
 and a management command to load data, but has no views, templates or admin.
 
 # django-cedictionary
@@ -14,7 +14,7 @@ dictionary, but the quality of these results will be low (for now).
 
 Install the package with pip.
 
-  pip install django-cedictionary
+    pip install django-cedictionary
 
 Add the "cedictionary" to your INSTALLED_APPS setting.
 
@@ -27,7 +27,7 @@ If you're not using South, run "manage.py syncdb".
 You'll need to download the [CC-CEDICT](http://cc-cedict.org/wiki/) then
 run the following management command.
 
-  ./manage.py cedictionary cedict_1_0_ts_utf-8_mdbg.txt.gz
+    ./manage.py cedictionary cedict_1_0_ts_utf-8_mdbg.txt.gz
 
 Note that on a fairly recent MacBook pro running Python 2.7.8, this takes
 3-4 minutes and peaks at about 300MB of RAM. So patience and caution on a

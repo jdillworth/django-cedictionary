@@ -1,11 +1,11 @@
 from setuptools import setup
 
-setup(name='ng Chinese Typer',
-      version='0.1',
-      description='A Chinese/Pinyin document typing helper',
-      url='http://bitbucket.org/jdillworth/ngchtyper',
+setup(name='django-cedictionary',
+      version='0.8.0',
+      description='Chinese-English django app, models and basic lookup',
+      url='https://github.com/jdillworth/django-cedictionary',
       author='Jeremy Dillworth',
-      author_email='jdillworth@gmail.com',
-      license='',
-      packages=['ngchtyper'],
+      author_email='jeremy@winter14.com',
+      license='New BSD',
+      packages=['cedictionary'],
       zip_safe=False)

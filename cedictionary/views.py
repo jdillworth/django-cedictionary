@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+class EntrySearchView(TemplateView):
+    template_name = 'cedictionary/entry_search.html'
+
+
+entry_search_view = EntrySearchView.as_view()

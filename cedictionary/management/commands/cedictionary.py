@@ -43,7 +43,9 @@ class Command(BaseCommand):
                     continue
 
                 all_entries.add((ch, chs, pinyin))
-                batch.append(models.ChineseEntry(ch=ch, chs=chs, pinyin=pinyin))
+                centry = models.ChineseEntry(ch=ch, chs=chs, pinyin=pinyin)
+                centry.init_pinyin_letters()
+                batch.append(centry)
 
                 if len(batch) == 2000:
                     models.ChineseEntry.objects.bulk_create(batch)

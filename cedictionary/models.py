@@ -2,6 +2,7 @@ import re
 
 from django.db import models
 
+import cedict
 
 class ChineseEntry(models.Model):
     #  max 6 characters, no long phrases
@@ -15,12 +16,16 @@ class ChineseEntry(models.Model):
     measure_words = models.ManyToManyField(
             'self', symmetrical=False, related_name='measure_word_for')
 
+    def pinyin_tone_marked(self):
+        return cedict.pinyinize(self.pinyin)
+
     def init_pinyin_letters(self):
         self.pinyin_letters = re.sub(r'[^A-Za-z]', '', self.pinyin)
 
     def save(self, *args, **kwargs):
         self.init_pinyin_letters()
         super(ChineseEntry, self).save(*args, **kwargs)
+
 
 class Variant(models.Model):
     class Meta:
